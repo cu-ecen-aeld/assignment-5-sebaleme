@@ -1,0 +1,5 @@
+
+config BR2_PACKAGE_AESD_CHAR_DRIVER
+	bool "aesd_char_driver"
+	help
+	  Includes the kernel module
