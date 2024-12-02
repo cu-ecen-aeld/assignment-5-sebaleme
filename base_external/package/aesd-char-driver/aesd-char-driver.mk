@@ -6,12 +6,12 @@
 ##############################################################
 
 # Adding assignment-8 content
-$(info    Building LDD repo packages...)
+$(info    Building AESD-CHAR-DRIVER repo packages...)
 AESD_CHAR_DRIVER_VERSION = 7e8bda598959fda7cf35721050857d162d1cb820
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
-AESD_ASSIGNMENTS_SITE = git@github.com:cu-ecen-aeld/assignments-3-and-later-sebaleme.git
+AESD_CHAR_DRIVER_SITE = git@github.com:cu-ecen-aeld/assignments-3-and-later-sebaleme.git
 AESD_CHAR_DRIVER_SITE_METHOD = git
 AESD_CHAR_DRIVER_GIT_SUBMODULES = YES
 AESD_CHAR_DRIVER_MODULE_SUBDIRS = aesd-char-driver/
