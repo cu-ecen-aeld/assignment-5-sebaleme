@@ -7,7 +7,7 @@
 
 # Adding assignment-8 content
 $(info    Building AESD-CHAR-DRIVER repo packages...)
-AESD_CHAR_DRIVER_VERSION = 341ef5e8b76536f30a8ee3cf998c292ca3e21ffa
+AESD_CHAR_DRIVER_VERSION = b3d0b6f3fe1e84bcd4f4f7c711ac7a983a3e9f6e
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -16,12 +16,14 @@ AESD_CHAR_DRIVER_SITE_METHOD = git
 AESD_CHAR_DRIVER_GIT_SUBMODULES = YES
 AESD_CHAR_DRIVER_MODULE_SUBDIRS = aesd-char-driver/
 
-#LDD_MODULE_MAKE_OPTS = KERNELDIR=$(LINUX_DIR)
+define AESD_CHAR_DRIVER_BUILD_CMDS
+    $(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/aesd-char-driver all
+endef
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
 # The -m option sets the mode (access-control bits) of the installed object(s)
 # The -d option specifies that the names are directories
-define LDD_INSTALL_TARGET_CMDS
+define AESD_CHAR_DRIVER_INSTALL_TARGET_CMDS
     $(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar_load $(TARGET_DIR)/usr/bin/
     $(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar_unload $(TARGET_DIR)/usr/bin/
     $(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar.ko $(TARGET_DIR)/usr/bin/
