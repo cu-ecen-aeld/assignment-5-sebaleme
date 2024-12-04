@@ -16,9 +16,9 @@ AESD_CHAR_DRIVER_SITE_METHOD = git
 AESD_CHAR_DRIVER_GIT_SUBMODULES = YES
 AESD_CHAR_DRIVER_MODULE_SUBDIRS = aesd-char-driver/
 
-define AESD_CHAR_DRIVER_BUILD_CMDS
-    $(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/aesd-char-driver all
-endef
+# the $(eval $(kernel-module)) line tells Buildroot to use its predefined infrastructure for building kernel modules. 
+# This includes automatically invoking make with the correct environment, paths, and cross-compilation flags.
+# Hence no explicite call to make in this file
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
 # The -m option sets the mode (access-control bits) of the installed object(s)
