@@ -7,7 +7,7 @@
 
 # Adding assignment-8 content
 $(info    Building AESD-CHAR-DRIVER repo packages...)
-AESD_CHAR_DRIVER_VERSION = 3c8b2a1d305eb7c78e0e2f47a761401ca3bfab64
+AESD_CHAR_DRIVER_VERSION = 50e2a1db40418b965109dd3b02af478f18f373fe
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
